@@ -5,3 +5,12 @@ Data: REF1735798104703, 2,947684215788,Second Message
 
 Data: REF1735798104717, 5,0768803048,Test Msg 
 
+Data: REF1735798804023, 5,0768803048,Test Msg 
+
+Err |            |                 |Test Message from Receiving Server by Nadil Liyanage BOC
+Data: REF1735800062925, 1,94765503048,This is my first test message
+
+Data: REF1735800289066, 1,94765503048,This is my first test message
+
+Data: REF1735800347443, 2,947684215788,Second Message
+
