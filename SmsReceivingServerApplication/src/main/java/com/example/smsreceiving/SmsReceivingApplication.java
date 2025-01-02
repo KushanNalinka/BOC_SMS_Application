@@ -24,15 +24,15 @@ public class SmsReceivingApplication {
 
 		try {
 			// Sending a test message via socket
-			try (Socket socket = new Socket("localhost", 8082)) {
-				PrintWriter writer = new PrintWriter(new OutputStreamWriter(socket.getOutputStream()), true);
-//				String message = "Test Message from Receiving Server by Nadil Liyanage BOC";
-//				writer.println(message);
-//
-//
+//			try (Socket socket = new Socket("localhost", 8082)) {
+////				PrintWriter writer = new PrintWriter(new OutputStreamWriter(socket.getOutputStream()), true);
+////				String message = "Test Message from Receiving Server by Nadil Liyanage BOC";
+////				writer.println(message);
+////
+////
 //				// Inserting to the log file
-//				LogFile.info("Err |            |                 |" + message);
-			}
+////				LogFile.info("Err |            |                 |" + message);
+//			}
 
 			// Processing database records
 			if (smsReceivingService != null) {
