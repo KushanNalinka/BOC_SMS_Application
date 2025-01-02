@@ -5,7 +5,7 @@ import java.io.FileWriter;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-class LogFile {   //This class was added on 01/09/2013 as create a log
+public class LogFile {   //This class was added on 01/09/2013 as create a log
 
     public LogFile() {}
     public static void info(String text) {
@@ -20,7 +20,8 @@ class LogFile {   //This class was added on 01/09/2013 as create a log
         try{
             FileWriter file = new FileWriter(logfile,true); // Create Log file if not exist
             BufferedWriter log = new BufferedWriter(file);
-            log.write(text+"|Live");
+//            log.write(text+"|Live");
+            log.write(text);
             log.write("\r\n");
             log.close(); //Close the output stream
         }catch (Exception e){

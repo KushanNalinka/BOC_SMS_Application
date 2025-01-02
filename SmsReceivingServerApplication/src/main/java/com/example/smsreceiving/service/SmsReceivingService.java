@@ -3,6 +3,8 @@ package com.example.smsreceiving.service;
 import com.example.smsreceiving.model.EmailRecord;
 import com.example.smsreceiving.repository.EmailRecordRepository;
 import org.springframework.stereotype.Service;
+import com.example.smsreceiving.LogFile;
+
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -37,6 +39,8 @@ public void processRecords() throws Exception {
             sendToGateway(errorRecords);
         }
 
+
+
         // Introduce a delay to avoid busy looping
         Thread.sleep(5000); // Delay in milliseconds (adjust as needed)
     }
@@ -66,9 +70,13 @@ public void processRecords() throws Exception {
                 os.write(data.getBytes());
                 os.flush();
 
+
+
                 // Read the reference number from the gateway server
                 String referenceNumber = reader.readLine();
-                System.out.println("Received Reference Number: " + referenceNumber);
+                System.out.println("Data: " + referenceNumber + ","+ data);
+
+                LogFile.info("Data: " + referenceNumber + ", " + data);
 
                 // Update the record with the reference number
                 record.setReferenceNumber(referenceNumber);
